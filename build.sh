@@ -10,6 +10,10 @@ make
 make install
 mkdir -p /out/vim
 cp -r /usr/local/* /out/vim
-strip /out/bin/vim
+strip /out/vim/bin/vim
 chown -R $(id -u):$(id -g) /out/vim
 EOF
+
+# and compress it
+echo "compressed version"
+xz --keep vim/bin/vim
