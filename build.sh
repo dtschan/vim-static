@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker run -i --rm -e vim_version=9.0.1582 -v "$PWD":/out -w /root alpine /bin/sh <<EOF
+docker run -i --rm -e vim_version=9.0.1582 -v "$PWD":/out -w /root alpine:3.18 /bin/sh <<EOF
 set -e
 
 # install build-time dependencies
